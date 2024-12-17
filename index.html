@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areus - Modern Red</title>
+
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css for prebuilt animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: radial-gradient(circle, rgba(100, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+            backdrop-filter: blur(15px);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Floating Background Elements */
+        .floating-circle {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 0, 0, 0.3);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: floatAnimation 10s infinite ease-in-out alternate;
+        }
+
+        .floating-circle.one {
+            top: 10%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle.two {
+            bottom: 5%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-circle.three {
+            top: 30%;
+            right: 30%;
+            width: 350px;
+            height: 350px;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0px) translateX(0px);
+            }
+            100% {
+                transform: translateY(30px) translateX(20px);
+            }
+        }
+
+        /* Content Card */
+        .card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-out;
+            z-index: 2;
+        }
+
+        /* Logo */
+        .logo {
+            width: 100px;
+            margin: 10px auto;
+            animation: bounceIn 2s ease;
+        }
+
+        /* Heading and Text */
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #ff4d4d;
+            text-shadow: 0px 0px 10px rgba(255, 77, 77, 0.8);
+            animation: pulse 2s infinite;
+        }
+
+        p {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        /* Fancy Button */
+        a.button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #ff4d4d, #b30000);
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+            transition: all 0.3s ease-in-out;
+            animation: floatButton 3s infinite ease-in-out;
+        }
+
+        a.button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 0, 0, 0.8);
+        }
+
+        @keyframes floatButton {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.02);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-circle one"></div>
+    <div class="floating-circle two"></div>
+    <div class="floating-circle three"></div>
+
+    <!-- Content Card -->
+    <div class="card animate__animated animate__fadeInUp">
+        <img src="https://d.top4top.io/p_3273q84xm0.png" alt="Areus Logo" class="logo">
+        <h1>Welcome to Areus</h1>
+        <p>Explore a modern, sleek, and dynamic experience powered by Areus.</p>
+        <a href="https://github.com/worldexecutor/Every-Executor/raw/refs/heads/main/AreusBootstrapper.zip" class="button" download>Download Now</a>
+    </div>
+
+</body>
+</html>
